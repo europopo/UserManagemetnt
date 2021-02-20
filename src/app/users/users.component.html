@@ -1,0 +1,16 @@
+<h2>我的用戶</h2>
+<ul class="users">
+  <li *ngFor="let user of users" >
+    <div>
+      <a routerLink="/detail/{{user.id}}" ><span class="badge">{{user.id}}</span>{{user.name}}</a>
+      <button class="delete" title="delete user" (click)="delete(user)">X</button>
+    </div>
+  </li>
+</ul>
+<div>
+  <label>User Name:
+    <input #userName>
+  </label>
+  <button (click)="add(userName.value); userName.value=''">add</button>
+</div>
+
