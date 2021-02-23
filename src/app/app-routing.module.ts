@@ -5,7 +5,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { UserDetailComponent } from "./user-detail/user-detail.component";
 import { ContentComponent } from "./content/content.component";
 import { LearningComponent } from './learning/learning.component';
-
+import { FatherComponent } from "./demo/father/father.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/learning', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
@@ -15,7 +15,9 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent, children: []},
     { path: 'detail/:id', component: UserDetailComponent},
   ]},
-  { path: 'learning', component: LearningComponent,}
+  { path: 'learning', component: LearningComponent,},
+  { path: 'father', component: FatherComponent,}
+
 ];
 
 @NgModule({

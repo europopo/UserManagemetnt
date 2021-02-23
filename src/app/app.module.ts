@@ -14,6 +14,8 @@ import { InMemoryDataService } from "./in-memory-data.service";
 import { UserSearchComponent } from './user-search/user-search.component';
 import { ContentComponent } from './content/content.component';
 import { LearningComponent } from './learning/learning.component';
+import { FatherComponent } from './demo/father/father.component';
+import { ChildrenComponent } from './demo/children/children.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LearningComponent } from './learning/learning.component';
     DashboardComponent,
     UserSearchComponent,
     ContentComponent,
-    LearningComponent
+    LearningComponent,
+    FatherComponent,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,
