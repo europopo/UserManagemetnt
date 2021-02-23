@@ -19,7 +19,7 @@ export class UserSearchComponent implements OnInit {
   show(): void {
     this.showrequest.emit("hello");
   }
-  
+
   search(term: string): void {
     this.searchTerms.next(term);
   }
@@ -35,5 +35,5 @@ export class UserSearchComponent implements OnInit {
     )
   }
 
-
+      
 }
