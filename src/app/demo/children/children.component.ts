@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./children.component.css']
 })
 export class ChildrenComponent implements OnInit {
-  name: string = 'hello';
+  @Input() name: string;
+  child = '模板變量調用';
   @Output() emit = new EventEmitter();
   constructor() { }
 

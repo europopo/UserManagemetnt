@@ -1,8 +1,8 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Observable, Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, switchMap } from "rxjs/operators";
-import { User } from "../user";
-import { UserService } from "../user.service";
+import { User } from "../../user";
+import { UserService } from "../../service/user.service";
 
 @Component({
   selector: 'app-user-search',
@@ -35,5 +35,5 @@ export class UserSearchComponent implements OnInit {
     )
   }
 
-      
+
 }

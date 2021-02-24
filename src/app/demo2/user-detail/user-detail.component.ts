@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from '../user';
-import { UserService } from "../user.service";
+import { User } from '../../user';
+import { UserService } from "../../service/user.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from "@angular/common";
 
@@ -22,7 +22,7 @@ export class UserDetailComponent implements OnInit {
     this.getUser();
   }
 
-  
+
 
   getUser(): void {
     const id = + this.route.snapshot.paramMap.get('id');
