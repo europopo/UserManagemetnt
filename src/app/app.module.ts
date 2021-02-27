@@ -20,6 +20,14 @@ import { HighlightDirective } from './directive/highlight.directive';
 import { DirectComponent } from './demo3/direct.component';
 import { StructureComponent } from './demo4/structure/structure.component';
 import { UnlessDirective } from './directive/unless.directive';
+import { PipestudyComponent } from './demo5/pipestudy/pipestudy.component';
+import { CanflyingPipe } from './pipe/canflying.pipe';
+import { CanflyingPurePipe } from './pipe/canflying-pure.pipe';
+import { HookComponent } from './demo6/hook.component';
+import { LifecycleComponent } from './demo6/lifecycle/lifecycle.component';
+import { SpyComponent } from './demo6/spy/spy.component';
+import { SpyDirective } from './directive/spy.directive';
+import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
 
 
 @NgModule({
@@ -37,7 +45,16 @@ import { UnlessDirective } from './directive/unless.directive';
     HighlightDirective,
     DirectComponent,
     StructureComponent,
-    UnlessDirective
+    UnlessDirective,
+    PipestudyComponent,
+    CanflyingPipe,
+    CanflyingPurePipe,
+    HookComponent,
+    LifecycleComponent,
+    SpyComponent,
+    SpyDirective,
+    OnchangesComponent,
+    OnChangesParentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+<p>The hero's birthday is {{ birthday | date:format | uppercase }}</p>
+<button (click)="toggleFormat()">Toggle Format</button>
+<h1>自定義管道</h1>
+<input type="text" #box
+          (keyup.enter)="addHero(box.value); addcopeHero(box.value); box.value=''"
+          placeholder="hero name">
+<button (click)="reset()">Reset</button>
+<h2>純管道</h2>
+<div *ngFor="let hero of (heroes | canflying)">
+  {{hero.name}}
+</div>
+<h2>非純管道</h2>
+<div *ngFor="let hero of (copeheroes | canflyingPure)">
+  {{hero.name}}
+</div>
+
+<h1>Async Hero Message and AsyncPipe</h1>
+<p>Message: {{ message$ | async }}</p>
+<button (click)="resend()">Resend</button>`,
+

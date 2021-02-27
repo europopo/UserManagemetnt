@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Observable, Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, switchMap } from "rxjs/operators";
-import { User } from "../../user";
+import { User } from "../../class/user";
 import { UserService } from "../../service/user.service";
 
 @Component({

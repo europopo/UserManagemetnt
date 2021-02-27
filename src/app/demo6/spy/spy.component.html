@@ -1,0 +1,6 @@
+<input #hero><button (click)="addhero(hero.value);hero.value=''">add hero</button><button (click)="reset()">reset</button>
+<div *ngFor="let hero of heroes" appSpy class="heroes">
+  {{hero}}
+</div>
+<h2>spy lifecycle hook message</h2>
+<app-messages></app-messages>

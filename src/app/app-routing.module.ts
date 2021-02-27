@@ -8,6 +8,11 @@ import { LearningComponent } from './learning/learning.component';
 import { FatherComponent } from "./demo/father/father.component";
 import { DirectComponent } from './demo3/direct.component';
 import { StructureComponent } from './demo4/structure/structure.component';
+import { PipestudyComponent } from './demo5/pipestudy/pipestudy.component';
+import { HookComponent } from './demo6/hook.component';
+import { LifecycleComponent } from './demo6/lifecycle/lifecycle.component';
+import { SpyComponent } from './demo6/spy/spy.component';
+import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/learning', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
@@ -21,6 +26,14 @@ const routes: Routes = [
   { path: 'father', component: FatherComponent},
   { path: 'direct', component: DirectComponent},
   { path: 'structure', component: StructureComponent},
+  { path: 'pipestudy', component: PipestudyComponent},
+  { path: 'hook', component: HookComponent, children: [
+    { path: 'lifecycle', component: LifecycleComponent},
+    { path: 'spy', component: SpyComponent},
+    { path: 'onchangesparent', component: OnChangesParentComponent, children: [
+      { path: 'onchanges', component: OnchangesComponent},
+    ]},
+  ]},
 ];
 
 @NgModule({
