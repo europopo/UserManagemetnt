@@ -28,7 +28,11 @@ import { LifecycleComponent } from './demo6/lifecycle/lifecycle.component';
 import { SpyComponent } from './demo6/spy/spy.component';
 import { SpyDirective } from './directive/spy.directive';
 import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
-
+import { DynamicComponent } from './demo7/dynamic/dynamic.component';
+import { AdDirective } from './demo7/ad.directive';
+import { AdBannerComponent } from './demo7/ad-banner.component';
+import { HeroJobAdComponent } from './demo7/hero-job-ad.component';
+import { HeroProfileComponent } from './demo7/hero-profile.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +59,11 @@ import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/
     SpyDirective,
     OnchangesComponent,
     OnChangesParentComponent,
+    DynamicComponent,
+    AdDirective,
+    AdBannerComponent,
+    HeroJobAdComponent,
+    HeroProfileComponent,
   ],
   imports: [
     BrowserModule,

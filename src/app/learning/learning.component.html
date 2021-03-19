@@ -2,7 +2,7 @@
 <nav>
   <ul>
     <li>
-      <a [routerLink]="['/content']">用戶管理</a>
+      <a [routerLink]="['/content']" [ngClass]="{'bg': classname, 'com': classname2} "  [ngStyle]="changestyle()">用戶管理</a>
     </li>
     <li>
       <a [routerLink]="['/father']">父子組件傳值</a>
@@ -19,5 +19,10 @@
     <li>
       <a [routerLink]="['/hook']">生命周期鈎子</a>
     </li>
+    <li>
+      <a [routerLink]="['/dynamic']">動態加載組件</a>
+    </li>
   </ul>
 </nav>
+
+<input #box [(ngModel)]="num">

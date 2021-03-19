@@ -13,6 +13,7 @@ import { HookComponent } from './demo6/hook.component';
 import { LifecycleComponent } from './demo6/lifecycle/lifecycle.component';
 import { SpyComponent } from './demo6/spy/spy.component';
 import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
+import { DynamicComponent } from './demo7/dynamic/dynamic.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/learning', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'direct', component: DirectComponent},
   { path: 'structure', component: StructureComponent},
   { path: 'pipestudy', component: PipestudyComponent},
+  { path: 'dynamic', component: DynamicComponent},
   { path: 'hook', component: HookComponent, children: [
     { path: 'lifecycle', component: LifecycleComponent},
     { path: 'spy', component: SpyComponent},

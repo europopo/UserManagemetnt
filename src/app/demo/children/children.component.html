@@ -6,5 +6,12 @@
   <label>子組件child_2：</label>
   <input [(ngModel)]="child">
 </div>
+<div>
+  <label>子組件child_3：</label>
+  <input #box (keyup)="show(box.value)" value="service向父組件傳值">
+</div>
+<h2>子組件：{{assign.getValue()}}</h2>
+<h2>{{assignval}}</h2>
+
 
 

@@ -1,0 +1,10 @@
+h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 140px;
+}
+/* h1:hover {
+  overflow: visible;
+  text-overflow: inherit;
+} */

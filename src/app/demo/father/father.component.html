@@ -1,4 +1,7 @@
 
-<h1>父組件child_1:{{childvalue}}</h1>
+<h1>父組件child_1:{{child_1}}</h1>
 <h1>父組件child_2:{{childapp.child}}</h1>
-<app-children #childapp (emit) = 'getValue($event)' [name]='child_1'></app-children>
+<label>父組件通過服務傳值</label><input #box type="text" (keyup.enter)="assign.setValue(box.value)">
+<input #box2 (keyup)="assignval(box2.value)">
+<h2>父組件child_3： {{showmsg}}</h2>
+<app-children #childapp (emit) = 'child_1 = $event' [name]='child_1'></app-children>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AssignmentService } from 'src/app/assignment.service';
 
 @Component({
   selector: 'app-father',
@@ -6,18 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./father.component.css']
 })
 export class FatherComponent implements OnInit {
-  childvalue: any;
   num = 1;
   child_1 = '事件傳值';
-  constructor() { }
+  showmsg = '';
+  constructor(public assign: AssignmentService) { }
 
   ngOnInit(): void {
-
+    this.assign.showMsg$.subscribe(msg =>this.showmsg = msg);
   }
   getValue(value: string) {
-    this.childvalue = value;
+    this.child_1 = value;
   }
-  change(){
-    alert(this.childvalue);
+
+  assignval(val) {
+    this.assign.missionConfirmedSource$.next(val);
   }
+
 }
