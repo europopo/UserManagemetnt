@@ -33,6 +33,7 @@ import { AdDirective } from './demo7/ad.directive';
 import { AdBannerComponent } from './demo7/ad-banner.component';
 import { HeroJobAdComponent } from './demo7/hero-job-ad.component';
 import { HeroProfileComponent } from './demo7/hero-profile.component';
+import { MusicComponent } from './music/music.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { HeroProfileComponent } from './demo7/hero-profile.component';
     AdBannerComponent,
     HeroJobAdComponent,
     HeroProfileComponent,
+    MusicComponent,
   ],
   imports: [
     BrowserModule,
