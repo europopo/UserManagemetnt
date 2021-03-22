@@ -9,3 +9,31 @@
 .com {
   font-weight: 900;
 }
+h1 {
+  margin-top: 0;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper span {
+  position: absolute;
+  top: 15px;
+}
+.slider-wrapper span:last-child {
+  right: 10%;
+}
+
+.snapshot-value {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.slider {
+  width: 90%;
+}
+
+.composite-slider {
+  display: flex;
+  align-items: center;
+}

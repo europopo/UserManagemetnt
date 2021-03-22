@@ -5,27 +5,36 @@
       <a [routerLink]="['/content']" [ngClass]="{'bg': classname, 'com': classname2} "  [ngStyle]="changestyle()">用戶管理</a>
     </li>
     <li>
-      <a [routerLink]="['/father']">父子組件傳值</a>
+      <a [routerLink]="['/father']" [ngStyle]="changestyle()">父子組件傳值</a>
     </li>
     <li>
-      <a [routerLink]="['/direct']">屬性型指令</a>
+      <a [routerLink]="['/direct']" [ngStyle]="changestyle()">屬性型指令</a>
     </li>
     <li>
-      <a [routerLink]="['/structure']">自定義結構型指令</a>
+      <a [routerLink]="['/structure']" [ngStyle]="changestyle()">自定義結構型指令</a>
     </li>
     <li>
-      <a [routerLink]="['/pipestudy']">管道</a>
+      <a [routerLink]="['/pipestudy']" [ngStyle]="changestyle()">管道</a>
     </li>
     <li>
-      <a [routerLink]="['/hook']">生命周期鈎子</a>
+      <a [routerLink]="['/hook']" [ngStyle]="changestyle()">生命周期鈎子</a>
     </li>
     <li>
-      <a [routerLink]="['/dynamic']">動態加載組件</a>
+      <a [routerLink]="['/dynamic']" [ngStyle]="changestyle()">動態加載組件</a>
     </li>
     <li>
-      <a [routerLink]="['/music']">music</a>
+      <a [routerLink]="['/music']" [ngStyle]="changestyle()">music</a>
     </li>
   </ul>
 </nav>
+<section>
+  <div class="composite-slider slider-wrapper">
+    <d-slider [(ngModel)]="inputValue2" [min]="minValue" [max]="maxValue" class="slider" (ngModelChange)="showVal($event)"></d-slider>
+    <div class="snapshot-value">
+      <input [(ngModel)]="inputValue2" style="width: 40px" class="devui-input" />
+    </div>
+    <span>{{ minValue }}</span>
+    <span>{{ maxValue }}</span>
+  </div>
+</section>
 
-<input #box [(ngModel)]="num">

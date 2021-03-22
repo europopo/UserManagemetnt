@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './demo2/users/users.component';
@@ -34,6 +35,19 @@ import { AdBannerComponent } from './demo7/ad-banner.component';
 import { HeroJobAdComponent } from './demo7/hero-job-ad.component';
 import { HeroProfileComponent } from './demo7/hero-profile.component';
 import { MusicComponent } from './music/music.component';
+
+// DevUI
+import { DevUIModule } from 'ng-devui';
+import { SliderModule } from 'ng-devui/slider';
+
+// ng-zorro
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { IconDefinition } from '@ant-design/icons-angular';
+import { CaretRightOutline, PauseOutline } from '@ant-design/icons-angular/icons';
+
+const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
+
 
 @NgModule({
   declarations: [
@@ -68,13 +82,18 @@ import { MusicComponent } from './music/music.component';
     MusicComponent,
   ],
   imports: [
+    SliderModule,
+    DevUIModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NzIconModule.forRoot(icons),
+    NzButtonModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]
