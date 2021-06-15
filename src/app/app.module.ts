@@ -35,6 +35,7 @@ import { AdBannerComponent } from './demo7/ad-banner.component';
 import { HeroJobAdComponent } from './demo7/hero-job-ad.component';
 import { HeroProfileComponent } from './demo7/hero-profile.component';
 import { MusicComponent } from './music/music.component';
+import { ShowtableComponent } from './demo8/showtable/showtable.component';
 
 // DevUI
 import { DevUIModule } from 'ng-devui';
@@ -45,6 +46,9 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { CaretRightOutline, PauseOutline } from '@ant-design/icons-angular/icons';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { NzTableModule } from 'ng-zorro-antd/table';
+
 
 const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
 
@@ -80,6 +84,7 @@ const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
     HeroJobAdComponent,
     HeroProfileComponent,
     MusicComponent,
+    ShowtableComponent,
   ],
   imports: [
     SliderModule,
@@ -91,9 +96,11 @@ const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
     HttpClientModule,
     NzIconModule.forRoot(icons),
     NzButtonModule,
+    NzTableModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    NzPopoverModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

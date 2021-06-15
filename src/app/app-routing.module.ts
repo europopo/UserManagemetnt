@@ -15,6 +15,7 @@ import { SpyComponent } from './demo6/spy/spy.component';
 import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
 import { DynamicComponent } from './demo7/dynamic/dynamic.component';
 import { MusicComponent } from './music/music.component';
+import { ShowtableComponent } from './demo8/showtable/showtable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/learning', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
@@ -38,6 +39,7 @@ const routes: Routes = [
     ]},
   ]},
   { path: 'music', component: MusicComponent},
+  { path: 'table', component: ShowtableComponent},
 ];
 
 @NgModule({

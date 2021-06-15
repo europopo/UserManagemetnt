@@ -1,0 +1,39 @@
+<p>showtable works!</p>
+
+<div id="table">
+  <!-- <table>
+    <tr *ngFor="let data of tabledata">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>
+        <button (click)="true">button</button>
+      </td>
+    </tr>
+  </table> -->
+
+  <nz-table
+    #virtualTable
+    [nzBordered]="true"
+    [nzVirtualItemSize]="30"
+    [nzData]="tabledata"
+    [nzVirtualForTrackBy]="trackByIndex"
+    [nzFrontPagination]="false"
+    [nzShowPagination]="false"
+    [nzScroll]="{ x: '90px', y: '400px' }"
+  >
+  <tbody>
+    <ng-template nz-virtual-scroll let-data let-index="index">
+      <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>
+          <button (click)="true">button</button>
+        </td>
+      </tr>
+    </ng-template>
+
+  </tbody>
+
+
+  </nz-table>
+</div>
