@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TableService } from "../service/table.service";
 
 @Component({
   selector: 'app-learning',
@@ -11,7 +13,10 @@ export class LearningComponent implements OnInit {
   classname2 = true;
 
   // style = {'font-size': `${this.num}px`};
-  constructor() { }
+  constructor(
+    public tableService: TableService,
+    public router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +39,9 @@ export class LearningComponent implements OnInit {
     return {'font-size': `${this.inputValue2}px`};
   }
 
-
+  clickTable() {
+    this.tableService.createTable();
+    this.router.navigate(['/table']);
+  }
 
 }

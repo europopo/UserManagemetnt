@@ -14,7 +14,7 @@
   <nz-table
     #virtualTable
     [nzBordered]="true"
-    [nzVirtualItemSize]="30"
+    [nzVirtualItemSize]="20"
     [nzData]="tabledata"
     [nzVirtualForTrackBy]="trackByIndex"
     [nzFrontPagination]="false"
@@ -24,8 +24,8 @@
   <tbody>
     <ng-template nz-virtual-scroll let-data let-index="index">
       <tr>
-        <td>{{data.id}}</td>
-        <td>{{data.name}}</td>
+        <td>{{data.empid}}</td>
+        <td>{{data.empnm}}</td>
         <td>
           <button (click)="true">button</button>
         </td>
@@ -36,4 +36,6 @@
 
 
   </nz-table>
+  <input #name>
+  <button (click)="clickbuttonAdd(name.value)">Add</button>
 </div>

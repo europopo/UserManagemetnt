@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AssignmentService } from 'src/app/assignment.service';
+import { AssignmentService } from 'src/app/service/assignment.service';
 
 @Component({
   selector: 'app-father',

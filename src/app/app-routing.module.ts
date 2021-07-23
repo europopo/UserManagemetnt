@@ -16,10 +16,12 @@ import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/
 import { DynamicComponent } from './demo7/dynamic/dynamic.component';
 import { MusicComponent } from './music/music.component';
 import { ShowtableComponent } from './demo8/showtable/showtable.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/learning', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
-  { path: '', component: LearningComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
+  { path: '', component: LoginComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'content', component: ContentComponent,  children: [
     { path: 'user', component: UsersComponent },
     { path: 'dashboard', component: DashboardComponent, children: []},
