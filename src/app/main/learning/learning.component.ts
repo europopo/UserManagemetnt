@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TableService } from "../service/table.service";
+import { TableService } from "../../service/table.service";
 
 @Component({
   selector: 'app-learning',

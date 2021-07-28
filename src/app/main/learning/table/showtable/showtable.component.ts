@@ -3,8 +3,8 @@ import { fromEvent, Subject } from 'rxjs';
 import { CreateData } from "../tabledata";
 import { NzTableComponent } from 'ng-zorro-antd/table';
 import { takeUntil } from 'rxjs/operators';
-import { TableService } from "../../service/table.service";
-import { User } from "../../class/user";
+import { TableService } from "../../../../service/table.service";
+import { User } from "../../../../class/user";
 @Component({
   selector: 'app-showtable',
   templateUrl: './showtable.component.html',

@@ -1,4 +1,4 @@
-import { User } from "../class/user";
+import { User } from "../../../class/user";
 export class CreateData {
 
   users: User[];

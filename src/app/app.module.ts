@@ -3,59 +3,50 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { UsersComponent } from './demo2/users/users.component';
-import { UserDetailComponent } from './demo2/user-detail/user-detail.component';
-import { MessagesComponent } from './demo2/messages/messages.component';
-import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './demo2/dashboard/dashboard.component';
-import { UserSearchComponent } from './demo2/user-search/user-search.component';
-import { ContentComponent } from './demo2/content/content.component';
-import { LearningComponent } from './learning/learning.component';
-import { FatherComponent } from './demo/father/father.component';
-import { ChildrenComponent } from './demo/children/children.component';
+import { UsersComponent } from './main/learning/usermangement/users/users.component';
+import { UserDetailComponent } from './main/learning/usermangement/user-detail/user-detail.component';
+import { MessagesComponent } from './main/learning/usermangement/messages/messages.component';
+import { DashboardComponent } from './main/learning/usermangement/dashboard/dashboard.component';
+import { UserSearchComponent } from './main/learning/usermangement/user-search/user-search.component';
+import { ContentComponent } from './main/learning/usermangement/content/content.component';
+import { LearningComponent } from './main/learning/learning.component';
+import { FatherComponent } from './main/learning/father/father/father.component';
+import { ChildrenComponent } from './main/learning/father/children/children.component';
 import { HighlightDirective } from './directive/highlight.directive';
-import { DirectComponent } from './demo3/direct.component';
-import { StructureComponent } from './demo4/structure/structure.component';
+import { DirectComponent } from './main/learning/direct/direct.component';
+import { StructureComponent } from './main/learning/structure/structure.component';
 import { UnlessDirective } from './directive/unless.directive';
-import { PipestudyComponent } from './demo5/pipestudy/pipestudy.component';
+import { PipestudyComponent } from './main/learning/pipestudy/pipestudy.component';
 import { CanflyingPipe } from './pipe/canflying.pipe';
 import { CanflyingPurePipe } from './pipe/canflying-pure.pipe';
-import { HookComponent } from './demo6/hook.component';
-import { LifecycleComponent } from './demo6/lifecycle/lifecycle.component';
-import { SpyComponent } from './demo6/spy/spy.component';
+import { HookComponent } from './main/learning/hook/hook.component';
+import { LifecycleComponent } from './main/learning/hook/lifecycle/lifecycle.component';
+import { SpyComponent } from './main/learning/hook/spy/spy.component';
 import { SpyDirective } from './directive/spy.directive';
-import { OnchangesComponent, OnChangesParentComponent } from './demo6/onchanges/onchanges.component';
-import { DynamicComponent } from './demo7/dynamic/dynamic.component';
-import { AdDirective } from './demo7/ad.directive';
-import { AdBannerComponent } from './demo7/ad-banner.component';
-import { HeroJobAdComponent } from './demo7/hero-job-ad.component';
-import { HeroProfileComponent } from './demo7/hero-profile.component';
-import { MusicComponent } from './music/music.component';
-import { ShowtableComponent } from './demo8/showtable/showtable.component';
+import { OnchangesComponent, OnChangesParentComponent } from './main/learning/hook/onchanges/onchanges.component';
+import { DynamicComponent } from './main/learning/dynamic/dynamic/dynamic.component';
+import { AdDirective } from './main/learning/dynamic/ad.directive';
+import { AdBannerComponent } from './main/learning/dynamic/ad-banner.component';
+import { HeroJobAdComponent } from './main/learning/dynamic/hero-job-ad.component';
+import { HeroProfileComponent } from './main/learning/dynamic/hero-profile.component';
+import { MusicComponent } from './main/learning/music/music.component';
+import { ShowtableComponent } from './main/learning/table/showtable/showtable.component';
 import { LoginComponent } from './login/login.component';
-// DevUI
-import { DevUIModule } from 'ng-devui';
-import { SliderModule } from 'ng-devui/slider';
-
-// ng-zorro
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzPopoverModule } from 'ng-zorro-antd/popover';
-import { NzTableModule } from 'ng-zorro-antd/table';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { DemoNgZorroAntdModule } from "../assets/icons/ng-zorro-antd.module";
+import { NgZorroAntdModule } from "./ng-zorro-antd.module";
+import { NgDevuiModule } from "./ng-devui.module";
 import { MainComponent } from './main/main.component';
+
+
+
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_US, zh_CN } from 'ng-zorro-antd/i18n';
+import { zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-
 registerLocaleData(zh);
 
-
-// const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,20 +83,14 @@ registerLocaleData(zh);
     MainComponent,
   ],
   imports: [
-    DemoNgZorroAntdModule,
-    SliderModule,
-    DevUIModule,
+    NgZorroAntdModule,
+    NgDevuiModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NzButtonModule,
-    NzTableModule,
-    NzPopoverModule,
-    NzFormModule,
-    NzInputModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
