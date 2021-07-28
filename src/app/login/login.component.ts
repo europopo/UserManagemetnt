@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,20 +9,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   validateForm!: FormGroup;
 
-  submitForm(): void {
-    for (const i in this.validateForm.controls) {
-      if (this.validateForm.controls.hasOwnProperty(i)) {
-        this.validateForm.controls[i].markAsDirty();
-        this.validateForm.controls[i].updateValueAndValidity();
-      }
-    }
-  }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    ) {}
 
-  constructor(private fb: FormBuilder) {}
+  submitForm(): void {
+    if (this.validateForm.value.userName=='europe'&&this.validateForm.value.password==123) {
+      this.router.navigate(['/main/learning']);
+    }else{
+      alert('密码错误');
+    }
+    
+  }
+  restart() {
+    this.validateForm.controls.userName.setValue('');
+    this.validateForm.controls.password.setValue('');
+  }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      userName: [null, [Validators.required]],
+      userName: [null, [Validators.required, Validators.maxLength(20)]],
       password: [null, [Validators.required]],
       remember: [true]
     });
