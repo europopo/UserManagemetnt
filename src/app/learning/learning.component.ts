@@ -41,7 +41,7 @@ export class LearningComponent implements OnInit {
 
   clickTable() {
     this.tableService.createTable();
-    this.router.navigate(['/table']);
+    this.router.navigate(['main/table']);
   }
 
 }

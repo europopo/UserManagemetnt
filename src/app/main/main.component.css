@@ -1,0 +1,17 @@
+header,footer{
+  background-color: #5e7ce0;
+  height: 17%;
+  width: 100%;
+}
+header a {
+  color: black;
+}
+footer {
+  position:relative;
+}
+.main-content {
+  background-color: #ffffff;
+  min-height: 650px;
+  width: 60%;
+  margin: 0 auto;
+}

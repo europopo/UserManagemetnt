@@ -40,18 +40,22 @@ import { DevUIModule } from 'ng-devui';
 import { SliderModule } from 'ng-devui/slider';
 
 // ng-zorro
-import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { IconDefinition } from '@ant-design/icons-angular';
-import { CaretRightOutline, PauseOutline } from '@ant-design/icons-angular/icons';
 import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { DemoNgZorroAntdModule } from "../assets/icons/ng-zorro-antd.module";
+import { MainComponent } from './main/main.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US, zh_CN } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
 
 
-const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
-
-
+// const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,8 +89,10 @@ const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
     MusicComponent,
     ShowtableComponent,
     LoginComponent,
+    MainComponent,
   ],
   imports: [
+    DemoNgZorroAntdModule,
     SliderModule,
     DevUIModule,
     BrowserAnimationsModule,
@@ -95,13 +101,13 @@ const icons: IconDefinition[] = [ CaretRightOutline, PauseOutline ];
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NzIconModule.forRoot(icons),
     NzButtonModule,
     NzTableModule,
     NzPopoverModule,
     NzFormModule,
+    NzInputModule
   ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

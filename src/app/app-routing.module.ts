@@ -17,31 +17,35 @@ import { DynamicComponent } from './demo7/dynamic/dynamic.component';
 import { MusicComponent } from './music/music.component';
 import { ShowtableComponent } from './demo8/showtable/showtable.component';
 import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // 空地址重定向到dashboard頁面
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'content', component: ContentComponent,  children: [
-    { path: 'user', component: UsersComponent },
-    { path: 'dashboard', component: DashboardComponent, children: []},
-    { path: 'detail/:id', component: UserDetailComponent},
-  ]},
-  { path: 'learning', component: LearningComponent,},
-  { path: 'father', component: FatherComponent},
-  { path: 'direct', component: DirectComponent},
-  { path: 'structure', component: StructureComponent},
-  { path: 'pipestudy', component: PipestudyComponent},
-  { path: 'dynamic', component: DynamicComponent},
-  { path: 'hook', component: HookComponent, children: [
-    { path: 'lifecycle', component: LifecycleComponent},
-    { path: 'spy', component: SpyComponent},
-    { path: 'onchangesparent', component: OnChangesParentComponent, children: [
-      { path: 'onchanges', component: OnchangesComponent},
+  { path: 'main', component: MainComponent, children: [
+    { path: 'content', component: ContentComponent,  children: [
+      { path: 'user', component: UsersComponent },
+      { path: 'dashboard', component: DashboardComponent, children: []},
+      { path: 'detail/:id', component: UserDetailComponent},
     ]},
+    { path: 'learning', component: LearningComponent,},
+    { path: 'father', component: FatherComponent},
+    { path: 'direct', component: DirectComponent},
+    { path: 'structure', component: StructureComponent},
+    { path: 'pipestudy', component: PipestudyComponent},
+    { path: 'dynamic', component: DynamicComponent},
+    { path: 'hook', component: HookComponent, children: [
+      { path: 'lifecycle', component: LifecycleComponent},
+      { path: 'spy', component: SpyComponent},
+      { path: 'onchangesparent', component: OnChangesParentComponent, children: [
+        { path: 'onchanges', component: OnchangesComponent},
+      ]},
+    ]},
+    { path: 'music', component: MusicComponent},
+    { path: 'table', component: ShowtableComponent},
   ]},
-  { path: 'music', component: MusicComponent},
-  { path: 'table', component: ShowtableComponent},
+
 ];
 
 @NgModule({
