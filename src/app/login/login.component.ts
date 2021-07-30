@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
       alert('密码错误');
     }
     
+    
   }
   restart() {
     this.validateForm.controls.userName.setValue('');
