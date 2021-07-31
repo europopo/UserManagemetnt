@@ -7,7 +7,8 @@ import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
-
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 @NgModule({
   exports: [
     NzIconModule,
@@ -16,7 +17,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzPopoverModule,
     NzTableModule,
     NzFormModule,
-    NzInputModule
+    NzInputModule,
+    NzAvatarModule,
+    NzDrawerModule
   ]
 })
 export class NgZorroAntdModule {

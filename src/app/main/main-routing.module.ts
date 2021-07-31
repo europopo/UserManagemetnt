@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from "../auth/auth.guard";
 
 
 import { MainComponent } from "./main.component";
@@ -21,7 +22,7 @@ import { MusicComponent } from './learning/music/music.component';
 import { ShowtableComponent } from './learning/table/showtable/showtable.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent, children: [
+  { path: '', component: MainComponent, canActivate: [AuthGuard], children: [
     { path: 'content', component: ContentComponent,  children: [
       { path: 'user', component: UsersComponent },
       { path: 'dashboard', component: DashboardComponent, children: []},

@@ -1,7 +1,25 @@
 <header>
   <i nz-icon nzType="home"></i><a routerLink='/main/learning'>主頁</a>
+  <div class="head-user">
+    <nz-avatar nz-tooltip nzTooltipTitle="{{id}}" nzIcon="user" (click)="open()"></nz-avatar>
+  </div>
 </header>
   <div class="main-content">
+    <nz-drawer
+      [nzClosable]="false"
+      [nzVisible]="visible"
+      nzPlacement="right"
+      nzTitle="Basic Drawer"
+      (nzOnClose)="close()"
+    >
+      <ng-container *nzDrawerContent>
+        <button nz-button nzType="primary" (click)="loginService.loginOut()">Login Out</button>
+
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </ng-container>
+    </nz-drawer>
     <router-outlet></router-outlet>
   </div>
 <footer></footer>
