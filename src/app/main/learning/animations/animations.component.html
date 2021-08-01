@@ -1,0 +1,10 @@
+<div 
+*ngFor="let animate of animates"
+[@state]="animate.state"
+(click)="toggleState(animate)"
+><p>{{animate.content}}</p></div>
+
+<div 
+*ngFor="let animate of animates"
+[@flyInOut]="'in'"
+><p>{{animate.content}}</p></div>

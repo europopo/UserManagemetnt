@@ -20,6 +20,7 @@ import { OnchangesComponent, OnChangesParentComponent } from './learning/hook/on
 import { DynamicComponent } from './learning/dynamic/dynamic/dynamic.component';
 import { MusicComponent } from './learning/music/music.component';
 import { ShowtableComponent } from './learning/table/showtable/showtable.component';
+import { AnimationsComponent } from './learning/animations/animations.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivate: [AuthGuard], children: [
@@ -44,6 +45,7 @@ const routes: Routes = [
     ]},
     { path: 'music', component: MusicComponent},
     { path: 'table', component: ShowtableComponent},
+    { path: 'animation', component: AnimationsComponent},
   ]}
 ];
 
