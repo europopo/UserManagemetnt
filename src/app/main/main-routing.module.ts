@@ -23,6 +23,7 @@ import { ShowtableComponent } from './learning/table/showtable/showtable.compone
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivate: [AuthGuard], children: [
+    { path: '', redirectTo: '/main/learning', pathMatch: 'full'},
     { path: 'content', component: ContentComponent,  children: [
       { path: 'user', component: UsersComponent },
       { path: 'dashboard', component: DashboardComponent, children: []},
