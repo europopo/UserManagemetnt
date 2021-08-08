@@ -1,10 +1,37 @@
 <div 
-*ngFor="let animate of animates"
-[@state]="animate.state"
-(click)="toggleState(animate)"
-><p>{{animate.content}}</p></div>
+    class="animate" 
+    [@state]="animates.animateOne.state"
+    (click)="toggleState(animates.animateOne)"
+>
+    <p>{{animates.animateOne.content}}</p>
+</div>
+
+<div>
+    <button (click)='show=!show'>Show</button>
+    <div 
+        class="animate"
+        *ngIf="show"
+        [@flyInOut]="'in'"
+        [ngStyle]="{visibility: animates.animateTwo.state}"
+    >
+        <p>{{animates.animateTwo.content}}</p>
+    </div>
+</div>
 
 <div 
-*ngFor="let animate of animates"
-[@flyInOut]="'in'"
-><p>{{animate.content}}</p></div>
+    class="animate"
+    *ngIf="show"
+    [@flyInOut]="'in'"
+    [ngStyle]="{visibility: animates.animateTwo.state}"
+>
+    <p>{{animates.animateTwo.content}}</p>
+</div>
+
+<div
+    class="animate"
+    (@flyInOut2.start)='animationStarted($event)'
+    (@flyInOut2.done)='animationDone($event)'
+    [@flyInOut2]="'in'"
+>
+    <p>多阶段动画</p>
+</div>

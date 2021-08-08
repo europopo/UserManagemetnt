@@ -22,7 +22,7 @@ export class LoginService {
     .then((users: Array<any>)=>{
       //users.push(admin);
       if (users) {
-        if(users.some((s)=>s.empid==id&&s.password==pw)){
+        if(users.some((s)=>s.userid==id&&s.password==pw)){
           islogin = true;
         }
       }
