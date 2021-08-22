@@ -21,6 +21,7 @@ import { DynamicComponent } from './learning/dynamic/dynamic/dynamic.component';
 import { MusicComponent } from './learning/music/music.component';
 import { ShowtableComponent } from './learning/table/showtable/showtable.component';
 import { AnimationsComponent } from './learning/animations/animations.component';
+import { DynamicFormComponent } from './learning/dynamic-form/dynamic-form/dynamic-form.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivate: [AuthGuard], children: [
@@ -46,6 +47,7 @@ const routes: Routes = [
     { path: 'music', component: MusicComponent},
     { path: 'table', component: ShowtableComponent},
     { path: 'animation', component: AnimationsComponent},
+    { path: 'dynamicform', component: DynamicFormComponent},
   ]}
 ];
 

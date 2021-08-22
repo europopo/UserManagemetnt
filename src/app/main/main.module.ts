@@ -38,6 +38,8 @@ import { HeroProfileComponent } from './learning/dynamic/hero-profile.component'
 import { MusicComponent } from './learning/music/music.component';
 import { ShowtableComponent } from './learning/table/showtable/showtable.component';
 import { AnimationsComponent } from './learning/animations/animations.component';
+import { DynamicFormComponent } from './learning/dynamic-form/dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './learning/dynamic-form/dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,8 @@ import { AnimationsComponent } from './learning/animations/animations.component'
     MusicComponent,
     ShowtableComponent,
     AnimationsComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent,
   ],
   imports: [
     CommonModule,

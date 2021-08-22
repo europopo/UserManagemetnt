@@ -7,24 +7,14 @@
 </div>
 
 <div>
-    <button (click)='show=!show'>Show</button>
+    <button nz-button nzType="primary" (click)='show=!show'>Show</button>
     <div 
         class="animate"
         *ngIf="show"
         [@flyInOut]="'in'"
-        [ngStyle]="{visibility: animates.animateTwo.state}"
     >
         <p>{{animates.animateTwo.content}}</p>
     </div>
-</div>
-
-<div 
-    class="animate"
-    *ngIf="show"
-    [@flyInOut]="'in'"
-    [ngStyle]="{visibility: animates.animateTwo.state}"
->
-    <p>{{animates.animateTwo.content}}</p>
 </div>
 
 <div
