@@ -1,0 +1,10 @@
+.animate {
+    width: 100px;
+    height: 70px;
+    border-radius: 2ex;
+    text-align: center;
+    line-height: 70px;
+    float: left;
+    margin: 15px;
+    background-color: brown;
+}

@@ -37,6 +37,7 @@ import { HeroJobAdComponent } from './learning/dynamic/hero-job-ad.component';
 import { HeroProfileComponent } from './learning/dynamic/hero-profile.component';
 import { MusicComponent } from './learning/music/music.component';
 import { ShowtableComponent } from './learning/table/showtable/showtable.component';
+import { AnimationsComponent } from './learning/animations/animations.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ShowtableComponent } from './learning/table/showtable/showtable.compone
     HeroProfileComponent,
     MusicComponent,
     ShowtableComponent,
+    AnimationsComponent,
   ],
   imports: [
     CommonModule,
