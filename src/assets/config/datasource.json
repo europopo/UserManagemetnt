@@ -1,7 +1,7 @@
 {
   "api": [
     {
-      "host": "http://localhost:7001/",
+      "host": "http://112.124.19.57:7001/",
       "public": true
     }
   ]
