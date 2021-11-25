@@ -25,6 +25,7 @@
     "ng-devui": "^11.0.0",
     "ng-zorro-antd": "^11.2.0",
     "rxjs": "~6.5.4",
+    "socket.io-client": "^2.3.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

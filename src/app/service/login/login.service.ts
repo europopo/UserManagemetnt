@@ -18,7 +18,7 @@ export class LoginService {
     if (admin.some((s)=>s.empid==id&&s.password==pw)) {
       return true;
     }
-    await this.http.get('user')
+    await this.http.get(`user?id=${id}`)
     .then((users: Array<any>)=>{
       //users.push(admin);
       if (users) {
