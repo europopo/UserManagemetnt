@@ -7,16 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { NgZorroAntdModule } from "./ng-zorro-antd.module";
-import { NgDevuiModule } from "./ng-devui.module";
+import { NgZorroAntdModule } from "./tools/components/ng-zorro-antd.module";
+import { NgDevuiModule } from "./tools/components/ng-devui.module";
+import { WebSocketService } from './service/common/web-socket.service';
+import { APP_INITIALIZER } from '@angular/core';
 
-
-
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { zh_CN } from 'ng-zorro-antd/i18n';
-import { registerLocaleData } from '@angular/common';
-import zh from '@angular/common/locales/zh';
-registerLocaleData(zh);
+export function configureProvider(socket: WebSocketService) {
+  return () => {
+    socket.connectSocket();
+    return true;
+  };
+}
+// import { NZ_I18N } from 'ng-zorro-antd/i18n';
+// import { zh_CN } from 'ng-zorro-antd/i18n';
+// import { registerLocaleData } from '@angular/common';
+// import zh from '@angular/common/locales/zh';
+// registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -33,7 +39,14 @@ registerLocaleData(zh);
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: configureProvider,
+      deps: [WebSocketService],
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

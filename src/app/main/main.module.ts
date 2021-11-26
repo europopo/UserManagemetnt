@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
-import { NgZorroAntdModule } from "../ng-zorro-antd.module";
-import { NgDevuiModule } from "../ng-devui.module";
+import { NgZorroAntdModule } from "../tools/components/ng-zorro-antd.module";
+import { NgDevuiModule } from "../tools/components/ng-devui.module";
 
 
 import { MainRoutingModule } from './main-routing.module';

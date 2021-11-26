@@ -10,6 +10,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 @NgModule({
   exports: [
     NzIconModule,
@@ -21,7 +22,8 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
     NzInputModule,
     NzAvatarModule,
     NzDrawerModule,
-    NzMessageModule
+    NzMessageModule,
+    NzLayoutModule
   ]
 })
 export class NgZorroAntdModule {
