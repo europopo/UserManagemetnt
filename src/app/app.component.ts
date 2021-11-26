@@ -12,7 +12,14 @@ export class AppComponent implements OnDestroy, OnInit {
     ) {}
 
   ngOnInit() {
+    // 監控頁面刷新或離開
+    window.onbeforeunload = (e) =>{
+      e = e || window.event;
+      if (e) {
+        // TODO: 踢出房間動作
+      }
 
+    }
 
 
   }
