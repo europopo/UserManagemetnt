@@ -16,7 +16,10 @@ export class AuthGuard implements CanActivate {
       console.log(localStorage.getItem('id'));
     if (localStorage.getItem('id'))
     return true;
-    else return this.router.parseUrl('login');
+    else {
+      alert('請重新登陸');
+      return this.router.parseUrl('login');
+    }
   }
 
 }

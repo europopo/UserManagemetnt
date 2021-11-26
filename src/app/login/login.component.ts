@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if (islogin) {
           this.webSocketService.emitSocketServer('login', 'success');
           localStorage.setItem('id', this.validateForm.value.userName);
-          this.router.navigate(['/main/learning']);
+          this.router.navigate(['/chat']);
         } else {
           alert('密码错误');
         }

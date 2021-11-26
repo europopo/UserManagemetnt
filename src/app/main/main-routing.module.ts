@@ -24,7 +24,6 @@ import { AnimationsComponent } from './learning/animations/animations.component'
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivate: [AuthGuard], children: [
-    { path: '', redirectTo: '/main/learning', pathMatch: 'full'},
     { path: 'content', component: ContentComponent,  children: [
       { path: 'user', component: UsersComponent },
       { path: 'dashboard', component: DashboardComponent, children: []},

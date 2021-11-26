@@ -1,0 +1,22 @@
+<nz-layout>
+  <nz-header></nz-header>
+
+  <nz-content>
+    <div class="room_pad">
+
+      <button *ngIf="!shownameinput" class="room_create" nz-button nzType='primary' (click)="shownameinput=!shownameinput">Create</button>
+
+      <nz-input-group *ngIf="shownameinput" class="room_input" [nzSuffix]="suffixIconSearch">
+        <input type="text" nz-input placeholder="input search room name" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="arrow-right" (click)="createRoom()"></i>
+      </ng-template>
+
+    </div>
+
+  </nz-content>
+
+  <nz-footer>demo project by europe</nz-footer>
+
+</nz-layout>

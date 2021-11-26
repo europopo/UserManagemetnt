@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { NgZorroAntdModule } from "./ng-zorro-antd.module";
-import { NgDevuiModule } from "./ng-devui.module";
+import { NgZorroAntdModule } from "./tools/components/ng-zorro-antd.module";
+import { NgDevuiModule } from "./tools/components/ng-devui.module";
 import { WebSocketService } from './service/common/web-socket.service';
 import { APP_INITIALIZER } from '@angular/core';
 
