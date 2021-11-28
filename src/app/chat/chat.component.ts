@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChatComponent implements OnInit {
   shownameinput = false; // 房間輸入框顯示
 
+  roomname: string; // 房间名
 
   constructor() { }
 
@@ -15,7 +16,9 @@ export class ChatComponent implements OnInit {
   }
 
   createRoom() {
-
+    if (this.roomname) {
+      
+    }
   }
 
 }

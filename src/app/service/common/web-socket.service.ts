@@ -22,8 +22,13 @@ export class WebSocketService {
       console.log('the Socket is connected!');
     });
 
-    this.ws.on('note_login', (msg)=>{
-      this.messageService.showMessage('success', msg);
+    this.ws.on("disconnect", (reason) => {
+      console.log("io disconnect reason:", reason);
+      if (reason === "io server disconnect") {
+        // the disconnection was initiated by the server, you need to reconnect manually
+        this.ws.connect();
+      }
+      // else the socket will automatically try to reconnect
     });
 
   }
