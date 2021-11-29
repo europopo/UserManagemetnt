@@ -19,10 +19,10 @@ export class LoginService {
       return true;
     }
     await this.http.get(`user?id=${id}`)
-    .then((users: Array<any>)=>{
+    .then((users: any)=>{
       //users.push(admin);
-      if (users) {
-        if(users.some((s)=>s.userid==id&&s.password==pw)){
+      if (users.data) {
+        if(users.data.some((s)=>s.userid==id&&s.password==pw)){
           islogin = true;
         }
       }

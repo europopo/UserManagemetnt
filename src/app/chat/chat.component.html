@@ -7,7 +7,7 @@
       <button *ngIf="!shownameinput" class="room_create" nz-button nzType='primary' (click)="shownameinput=!shownameinput">Create</button>
 
       <nz-input-group *ngIf="shownameinput" class="room_input" [nzSuffix]="suffixIconSearch">
-        <input type="text" nz-input [(ngModel)]="roomname" placeholder="input search room name" />
+        <input type="text" nz-input placeholder="input search room name" [(ngModel)]="roomname" />
       </nz-input-group>
       <ng-template #suffixIconSearch>
         <i nz-icon nzType="arrow-right" (click)="createRoom()"></i>

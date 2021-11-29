@@ -10,8 +10,9 @@ export class ChatService {
     public http: HttpService,
   ) { }
 
-  createRoom() {
-    
+  createRoom(roomname: string) {
+    this.http.post('room', {data: roomname});
+    // this.http.get('user?id=europe');
   }
 
 }

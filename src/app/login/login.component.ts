@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.validateForm.value.password
       ).then((islogin)=>{
         if (islogin) {
-          this.webSocketService.emitSocketServer('login', 'success');
           localStorage.setItem('id', this.validateForm.value.userName);
           this.router.navigate(['/chat']);
         } else {

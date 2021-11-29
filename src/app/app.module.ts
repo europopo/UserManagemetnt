@@ -11,6 +11,8 @@ import { NgZorroAntdModule } from "./tools/components/ng-zorro-antd.module";
 import { NgDevuiModule } from "./tools/components/ng-devui.module";
 import { WebSocketService } from './service/common/web-socket.service';
 import { APP_INITIALIZER } from '@angular/core';
+import { HttpClientXsrfModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './http-interceptors';
 
 export function configureProvider(socket: WebSocketService) {
   return () => {
@@ -38,8 +40,13 @@ export function configureProvider(socket: WebSocketService) {
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    // HttpClientXsrfModule.withOptions({
+    //   cookieName: 'csrfToken',
+    //   headerName: 'x-csrf-token',
+    // }),
   ],
   providers: [
+    httpInterceptorProviders,
     {
       provide: APP_INITIALIZER,
       useFactory: configureProvider,

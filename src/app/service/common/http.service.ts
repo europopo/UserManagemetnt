@@ -6,16 +6,18 @@ import { MessageService } from "../message.service";
 // import db from "../../../assets/config/datasource.json";
 const datasource = require('../../../assets/config/datasource.json');
 
-const options = {
-  headers: new HttpHeaders({
-    'Cache-Control': 'no-cache'
-  })
-}
+
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
   ROOTURL: string;
+
+  options = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  }
 
   constructor(
     private http: HttpClient,
@@ -37,17 +39,22 @@ export class HttpService {
         throw e;
       }
     });
+
     return response;
   }
 
   async post(url: string, body: any) {
+
+    // if (localStorage.token) {
+    //   options.headers =
+    //   options.headers.set('Authorization', localStorage.token);
+    // }
     url = this.ROOTURL + url;
     const response = await this.http.post(url, body).toPromise()
     .then(res => res)
     .catch((e:HttpErrorResponse) => {
-      console.log(e);
       if (e.status==0) {
-        
+
       }
     });
     return response;

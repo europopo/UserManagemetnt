@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from './service/chat.service';
 
 @Component({
   selector: 'app-chat',
@@ -10,14 +11,16 @@ export class ChatComponent implements OnInit {
 
   roomname: string; // 房间名
 
-  constructor() { }
+  constructor(
+    public chatService: ChatService,
+  ) { }
 
   ngOnInit(): void {
   }
 
   createRoom() {
     if (this.roomname) {
-      
+      this.chatService.createRoom(this.roomname);
     }
   }
 
