@@ -11,7 +11,7 @@ export class ChatService {
   ) { }
 
   createRoom(roomname: string) {
-    this.http.post('room', {data: roomname});
+    this.http.post('room', {roonname: roomname});
     // this.http.get('user?id=europe');
   }
 

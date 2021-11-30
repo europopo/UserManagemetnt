@@ -19,13 +19,15 @@ export class LoginComponent implements OnInit, OnDestroy {
     private router: Router,
     ) {}
 
-  async submitForm() {
-    await this.loginService.checkUser(
-      this.validateForm.value.userName,
-      this.validateForm.value.password
-      ).then((islogin)=>{
-        if (islogin) {
-          localStorage.setItem('id', this.validateForm.value.userName);
+  submitForm() {
+    const user = {
+      id: this.validateForm.value.userName,
+      pw: this.validateForm.value.password
+    }
+    this.loginService.checkUser(user)
+    .subscribe((res)=>{
+        if (res.length) {
+          // localStorage.setItem('id', this.validateForm.value.userName);
           this.router.navigate(['/chat']);
         } else {
           alert('密码错误');
@@ -42,7 +44,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // this.webSocketService.connectSocket();
+    this.loginService.token().subscribe((res)=> console.log(res));
     this.validateForm = this.fb.group({
       userName: [null, [Validators.required, Validators.maxLength(20)]],
       password: [null, [Validators.required]],

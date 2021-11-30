@@ -31,6 +31,10 @@ export class WebSocketService {
       // else the socket will automatically try to reconnect
     });
 
+    this.ws.on('note_login', () => {
+      this.messageService.showMessage('success', 'Hi everyone!');
+    });
+
   }
 
   emitSocketServer(event, data) {
